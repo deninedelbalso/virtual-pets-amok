@@ -1,14 +1,12 @@
 package shelter;
 
-import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
 
-public class DogTest{
-	
-Dog anyDog = new Dog("name",10,10,10,10,10,10,"description");
+public class DogTest {
+
+	Dog anyDog = new Dog("name", 10, 10, 10, 10, 10, 10, "description");
 
 	@Test
 	public void shouldReturnAllDogProperties() {
@@ -21,15 +19,15 @@ Dog anyDog = new Dog("name",10,10,10,10,10,10,"description");
 		int happiness = anyDog.getHappiness();
 		String description = anyDog.getDescription();
 		assertEquals("name", name);
-		assertEquals(10,hunger);
-		assertEquals(10,thirst);
-		assertEquals(10,boredom);
-		assertEquals(10,waste);
-		assertEquals(10,health);
-		assertEquals(10,happiness);
+		assertEquals(10, hunger);
+		assertEquals(10, thirst);
+		assertEquals(10, boredom);
+		assertEquals(10, waste);
+		assertEquals(10, health);
+		assertEquals(10, happiness);
 		assertEquals("description", description);
 	}
-	
+
 	@Test
 	public void shouldHaveHungerDecreaseBy5AfterFeed() {
 		anyDog.feed();
@@ -37,47 +35,50 @@ Dog anyDog = new Dog("name",10,10,10,10,10,10,"description");
 		assertEquals(5, hunger);
 
 	}
-	
+
 	@Test
 	public void shouldHaveThirstDecreaseBy5AfterWater() {
 		anyDog.water();
 		int thirst = anyDog.getThirst();
 		assertEquals(5, thirst);
-		
+
 	}
-	
+
 	@Test
 	public void shouldHaveBoredomDecreaseBy5AfterPlayAndShouldHaveBoredomIncreaseThirstBy5() {
 		anyDog.play();
-	    int hunger = anyDog.getHunger();
+		int hunger = anyDog.getHunger();
 		int thirst = anyDog.getThirst();
 		int boredom = anyDog.getBoredom();
 		assertEquals(15, hunger);
 		assertEquals(15, thirst);
 		assertEquals(5, boredom);
 	}
-	
+
 	@Test
 	public void shouldHaveNoWasteAfterCleaning() {
 		anyDog.clean();
-	    int waste = anyDog.getWaste();
+		int waste = anyDog.getWaste();
 		assertEquals(0, waste);
-	
+
 	}
-	
+
+	@Test
 	public void shouldWalkDecreaseWasteBy5AndIncreaseHappinessBy5() {
 		anyDog.walk();
-	    int waste = anyDog.getWaste();
-	    int happiness = anyDog.getHappiness();
+		int waste = anyDog.getWaste();
+		int happiness = anyDog.getHappiness();
 		assertEquals(5, waste);
 		assertEquals(15, happiness);
 
-	
 	}
-	
-	
-	
-	
-	
-	
+
+	@Test
+	public void shouldHaveHealthDecreaseBy5() {
+		anyDog.reduceHealth();
+		int health = anyDog.getHealth();
+		assertEquals(5, health);
+
+	}
+
 }
