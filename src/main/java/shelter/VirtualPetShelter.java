@@ -29,15 +29,12 @@ public class VirtualPetShelter {
 		for (Pet pet : pets.values()) {
 			System.out.println("Pet name: " + pet.getName() + " " + pet.getDescription() + " ");
 		}
+	}
 	
-	}
-	public void play(Pet anyPet) {
-		anyPet.play();
-	}
 	
 	public void showStats() {
 		for (Pet pet : pets.values()) {
-			System.out.println(pet.getName() + " " + pet.getDescription() + " " + "Boredom: " + pet.getBoredom() + " "  +  "Happiness: " +pet.getHappiness() + " " + "Health: " + pet.getHealth());
+			System.out.println(pet.getName() + " " + pet.getDescription() + " " + "Boredom: " + pet.getBoredom() + " "  +  "Happiness: " +pet.getHappiness() + " " +  "Health: " + pet.getHealth());
 		
 		}	
 	}
@@ -46,11 +43,24 @@ public class VirtualPetShelter {
 		for (Pet pet : pets.values()) {
 			pet.tick();
 		}
+	}
+		public void walkDog() {
+			for (Pet pet : pets.values()) {
+				if (pet instanceof WalkDogs) {
+					((WalkDogs)pet).walk();
+				}
+			}
 	
 
 		
-		
-	}
+	
+		}
+
+		public void play(Pet findPet) {
+			// TODO Auto-generated method stub
+			
+		}
+
 }
 
 
