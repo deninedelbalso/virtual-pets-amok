@@ -8,9 +8,6 @@ public abstract class Pet {
 	protected int happiness;
 	protected String description;
 
-	public Pet() {
-		super();
-	}
 
 	public String getName() {
 		return name;
