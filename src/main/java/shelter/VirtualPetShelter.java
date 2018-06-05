@@ -4,10 +4,6 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-import virtualpetshelter.VirtualPet;
-
-
-
 public class VirtualPetShelter {
 
 	Map<String, Pet> pets = new HashMap<>();
@@ -37,10 +33,24 @@ public class VirtualPetShelter {
 	}
 	public void play(Pet anyPet) {
 		anyPet.play();
-	
 	}
 	
+	public void showStats() {
+		for (Pet pet : pets.values()) {
+			System.out.println(pet.getName() + " " + pet.getDescription() + " " + "Boredom: " + pet.getBoredom() + " "  +  "Happiness: " +pet.getHappiness() + " " + "Health: " + pet.getHealth());
+		
+		}	
+	}
 
+	public void tickAll() {
+		for (Pet pet : pets.values()) {
+			pet.tick();
+		}
+	
+
+		
+		
+	}
 }
 
 

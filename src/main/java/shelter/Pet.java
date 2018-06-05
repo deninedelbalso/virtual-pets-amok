@@ -28,11 +28,19 @@ public abstract class Pet {
 	public String getDescription() {
 		return description;
 	}
+	public void play() {
+		boredom -= 1;
 
-	public abstract void play();
-
+	}
+	
 	public void reduceHealth() {
 		health -= 5;
+	}
+
+	public void tick() {
+		health -= 1;
+		happiness -= 10;
+		boredom-= 10;
 	}
 
 }
