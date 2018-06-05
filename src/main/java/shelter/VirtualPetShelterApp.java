@@ -13,10 +13,10 @@ public class VirtualPetShelterApp {
 		Dog raffles = new Dog("Raffles", 10, 10, 10, 10, 10, 10, "is a Virgo");
 		Cat pickles = new Cat("Pickles", 10, 10, 10, 10, 10, 10, "enjoys playing on his phone");
 
-		myVirtualPetShelter.adopt(plops);
-		myVirtualPetShelter.adopt(misterBigToes);
-		myVirtualPetShelter.adopt(raffles);
-		myVirtualPetShelter.adopt(pickles);
+		myVirtualPetShelter.add(plops);
+		myVirtualPetShelter.add(misterBigToes);
+		myVirtualPetShelter.add(raffles);
+		myVirtualPetShelter.add(pickles);
 
 		System.out.println("Welcome to the Virtual Pet Shelter. We carry both robotic and organic pets!");
 		System.out.println("Here are our current pets:");
@@ -36,6 +36,9 @@ public class VirtualPetShelterApp {
 				myVirtualPetShelter.showAllPets();
 				System.out.println("Enter the name of the pet you would like to play with");
 				String name = input.nextLine();
+				myVirtualPetShelter.play(myVirtualPetShelter.findPet(name));
+
+				
 			}
 		} while (!choice.equals("exit"));
 
