@@ -57,8 +57,9 @@ public class VirtualPetShelterApp {
 						+ ". Pickles boredom level is now at " + pickles.getBoredom() + ".");
 			} else if (choice.equals("3")) {
 				myVirtualPetShelter.walkAllDog();
-				System.out.println("Walking is fun! " + "Plops happiness level is now at " + plops.getHappiness() + 
-						" ."  + "Raffles happiness level is now at " + raffles.getHappiness() + " and Raffles waste level is now at " + raffles.getWaste() + " .");
+				System.out.println("Walking is fun! " + "Plops happiness level is now at " + plops.getHappiness() + " ."
+						+ "Raffles happiness level is now at " + raffles.getHappiness()
+						+ " and Raffles waste level is now at " + raffles.getWaste() + " .");
 			} else if (choice.equals("4")) {
 				System.out.println("Pick a pet you would like to adopt");
 				System.out.println("You can choose from: Plops, Mister Big Toes, Raffles or Pickles");
@@ -81,9 +82,6 @@ public class VirtualPetShelterApp {
 			} else if (choice.equals("7")) {
 				System.out.println("What is the name of the pet you want to admit?");
 				String name = input.nextLine();
-				System.out.println("What kind of pet is it?");
-				String descriptionNewAdmit = input.nextLine();
-				myVirtualPetShelter.add(null);
 				System.out.println("Your pet is now admitted");
 
 			} else if (choice.equals("8")) {
@@ -94,15 +92,14 @@ public class VirtualPetShelterApp {
 						+ ". Mister Big Toes oil level is now at " + misterBigToes.getOilLevel() + ". ");
 
 			} else if (choice.equals("9")) {
-				String clean= input.nextLine();
+				String clean = input.nextLine();
 				pickles.cleanLitterBox();
-				System.out.println("Pickles doesnt have to lie in his poop. Rejoice! His waste level is now at" + pickles.getWaste());
+				System.out.println("Pickles doesnt have to lie in his poop. Rejoice! His waste level is now at"
+						+ pickles.getWaste());
 
-			
-
-			} else 
+			} else
 				System.out.println("Shelter is closed. Come back later");
-			
+
 			myVirtualPetShelter.tickAll();
 		} while (!choice.equals("exit"));
 		input.close();

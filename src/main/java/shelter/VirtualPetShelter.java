@@ -104,15 +104,8 @@ public class VirtualPetShelter {
 		}
 	}
 
-	public void tick() {
-		for (Pet pet : pets.values()) {
-			if (pet instanceof RoboticPet) {
-				((OrganicPet) pet).tick();
-			}
-		}
-	}
 
-	public void tickedOff() {
+	public void tick() {
 		for (Pet pet : pets.values()) {
 			if (pet instanceof RoboticPet) {
 				((OrganicPet) pet).tick();

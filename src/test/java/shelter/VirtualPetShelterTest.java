@@ -14,7 +14,7 @@ public class VirtualPetShelterTest {
 	private RoboCat misterBigToes;
 	private Dog raffles;
 	private Cat pickles;
-	
+
 	@Before
 	public void setUp() {
 		VirtualPetShelter myVirtualPetShelter = new VirtualPetShelter();
@@ -24,29 +24,21 @@ public class VirtualPetShelterTest {
 		pickles = new Cat("Pickles", 10, 10, 10, 10, 10, 10, "enjoys playing on his phone");
 
 	}
-	
-	
+
 	@Test
 	public void virtualPetShelterShouldBeAddOutAPet() {
 		myVirtualPetShelter.adopt(plops);
 		Pet foundRoboDog = myVirtualPetShelter.findPet(plops.getName());
 		assertThat(foundRoboDog, is(nullValue()));
-	
+
 	}
-	
-	
-	
-	
-	
-	
-	
-	
+
 	@Test
 	public void virtualPetShelterShouldBeAbleToAdoptOutAPet() {
 		myVirtualPetShelter.adopt(plops);
 		Pet foundRoboDog = myVirtualPetShelter.findPet(plops.getName());
 		assertThat(foundRoboDog, is(nullValue()));
-	
+
 	}
 
 	@Test
@@ -59,8 +51,6 @@ public class VirtualPetShelterTest {
 		assertThat(foundRoboCat, is(nullValue()));
 
 	}
-	
-	
 
 	@Test
 	public void virtualPetShelterShouldBeAbleToAddMultiplePets() {
@@ -78,5 +68,5 @@ public class VirtualPetShelterTest {
 		assertThat(foundRoboDog, is(pickles));
 
 	}
-	
+
 }

@@ -6,11 +6,6 @@ public class OrganicPet extends Pet {
 	protected int thirst;
 	protected int waste;
 
-	// not needed, imports in
-	// public OrganicPet() {
-	// super();
-	// }
-
 	public int getHunger() {
 		return hunger;
 	}
@@ -47,7 +42,7 @@ public class OrganicPet extends Pet {
 	}
 
 	public void cleanLitterBox() {
-         waste -=5;		
+		waste -= 5;
 	}
 
 }
