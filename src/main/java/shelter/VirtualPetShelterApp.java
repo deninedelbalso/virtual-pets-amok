@@ -57,8 +57,8 @@ public class VirtualPetShelterApp {
 						+ ". Pickles boredom level is now at " + pickles.getBoredom() + ".");
 			} else if (choice.equals("3")) {
 				myVirtualPetShelter.walkAllDog();
-				System.out.println("Walking is fun! " + "Plops happiness level is now at " + plops.getHappiness()
-						+ ". Raffles happiness level is now at " + raffles.getHappiness() + ". ");
+				System.out.println("Walking is fun! " + "Plops happiness level is now at " + plops.getHappiness() + 
+						" ."  + "Raffles happiness level is now at " + raffles.getHappiness() + " and Raffles waste level is now at " + raffles.getWaste() + " .");
 			} else if (choice.equals("4")) {
 				System.out.println("Pick a pet you would like to adopt");
 				System.out.println("You can choose from: Plops, Mister Big Toes, Raffles or Pickles");
