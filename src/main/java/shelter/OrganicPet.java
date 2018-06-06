@@ -46,4 +46,8 @@ public class OrganicPet extends Pet {
 
 	}
 
+	public void cleanLitterBox() {
+         waste -=5;		
+	}
+
 }
